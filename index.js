@@ -1,16 +1,26 @@
-// array of questions for user
-const questions = [
+const fs = require("fs");
+const util = require("util");
+var inquirer = require("inquirer");
+const generateMarkdown = require("./utils/generateMarkdown");
 
-];
+  // Promise-based versions of functions using node style callbacks
+const readFileAsync = util.promisify(fs.readFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 
-// function to write README file
-function writeToFile(fileName, data) {
-}
+generateMarkdown();
+// // array of questions for user
+// const questions = [
 
-// function to initialize program
-function init() {
+// ];
 
-}
+// // function to write README file
+// function writeToFile(fileName, data) {
+// }
 
-// function call to initialize program
-init();
+// // function to initialize program
+// function init() {
+
+// }
+
+// // function call to initialize program
+// init();
