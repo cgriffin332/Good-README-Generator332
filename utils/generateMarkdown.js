@@ -39,19 +39,30 @@ inquirer
       Test: "Test",
     },
     {
-      type: "checkbox",
-      message: "What languages do you know?",
-      name: "languages",
+      type: "list",
+      message: "Choose a license for your application.",
+      name: "license",
       choices: [
-          "HTML", "JS", "CSS"
+          "MIT", "Mozilla", "ISC", "IBM", "GNU", "BSD", "Boost"
       ],
+  //[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+//[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+//[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+//[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)
+//[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+//[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+//[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
     },
     {
-      type: "list",
-      message: "What is your preferred method of communciation?",
-      name: "method",
-      choices: ["email", "phone"]
-    }
+      type: "input",
+      message: "What is your GitHub username?",
+      GitHub: "GitHub",
+    },
+    {
+      type: "input",
+      message: "What are your email address?",
+      Email: "Email",
+    },
   ])
   .then(function(response) {
 
