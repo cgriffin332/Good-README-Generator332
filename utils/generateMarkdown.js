@@ -112,9 +112,8 @@ Email: ${data.Email} <br />
 GitHub: https://github.com/${data.GitHub}
 `,
         (err) => {
-          if (err) console.log(err);
-          console.log("Success!");
-          return `# ${data.Title}`;
+          if (err) throw err;
+          console.log("Success");
         }
       );
     });
