@@ -1,12 +1,7 @@
-// const fs = require("fs");
-// const util = require("util");
-// var inquirer = require("inquirer");
+// import info from generateMarkdown.js
 const generateMarkdown = require("./utils/generateMarkdown");
 
-  // Promise-based versions of functions using node style callbacks
-// const readFileAsync = util.promisify(fs.readFile);
-// const writeFileAsync = util.promisify(fs.writeFile);
-
+//call the function
 generateMarkdown();
 
 

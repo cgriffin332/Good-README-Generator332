@@ -1,6 +1,7 @@
+// get package info
 const fs = require("fs");
 const util = require("util");
-var inquirer = require("inquirer");
+const inquirer = require("inquirer");
 
 // Promise-based versions of functions using node style callbacks
 const writeFileAsync = util.promisify(fs.writeFile);
@@ -57,6 +58,7 @@ function generateMarkdown() {
       },
     ])
     .then(function (data) {
+      //assign the variable badge to the badge information for each license using a conditional
       let badge = "";
       if (data.License === "MIT") {
         badge =
@@ -80,6 +82,7 @@ function generateMarkdown() {
         badge =
           "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
       }
+      //write the information to a md file
       writeFileAsync(
         "README2.md",
         `# ${data.Title}
@@ -128,5 +131,5 @@ GitHub: https://github.com/${data.GitHub}
       );
     });
 }
-
+//export function
 module.exports = generateMarkdown;
