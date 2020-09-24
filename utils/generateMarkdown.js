@@ -33,7 +33,7 @@ function generateMarkdown(data) {
       {
         type: "input",
         message: "What are your project's contribution guidelines?",
-        name: "Contribution",
+        name: "Contributing",
       },
       {
         type: "input",
@@ -66,9 +66,42 @@ function generateMarkdown(data) {
     ])
     .then(function (data) {
       console.log(data);
-      writeFileAsync("README2.md", `# ${data.Title}`, (err) => {
-        if (err) console.log(err);
+      writeFileAsync("README2.md", `
+      # ${data.Title}
 
+      ## Description
+      ${data.Description}
+
+      ## Table of Contents
+
+      * [Installation](#installation)
+      * [Usage](#usage)
+      * [Contributing](#Contributing)
+      * [Tests](#tests)
+      * [License](#license)
+      * [Questions](#questions)
+       
+      ## Installation
+      ${data.Installation}
+
+      ## Usage
+      ${data.Usage}
+
+      ## Contributing
+      ${data.Contributing}
+
+      ## Tests
+      ${data.Tests}
+
+      ## License
+      ${data.License}
+
+      ## Questions
+      If you have any additional questions, please contact me via email or GitHub by clicking the links below.
+      Email: ${data.Email}
+      GitHub: https://github.com/${data.GitHub}
+      `, (err) => {
+        if (err) console.log(err);
         console.log("Success!");
       });
 
