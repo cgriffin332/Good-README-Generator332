@@ -76,7 +76,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       } else if (data.License === "Mozilla") {
         badge =
           "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
-        licenseText = `https://opensource.org/licenses/MPL-2.0`;
+        licenseText = `Link to license: https://opensource.org/licenses/MPL-2.0`;
       } else if (data.License === "ISC") {
         badge =
           "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)";
@@ -85,11 +85,11 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
       } else if (data.License === "IBM") {
         badge =
           "[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)";
-        licenseText = `https://opensource.org/licenses/IPL-1.0`;
+        licenseText = `Link to license: https://opensource.org/licenses/IPL-1.0`;
       } else if (data.License === "GNU") {
         badge =
           "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
-        licenseText = `https://www.gnu.org/licenses/gpl-3.0`;
+        licenseText = `Link to license: https://www.gnu.org/licenses/gpl-3.0`;
       } else if (data.License === "BSD") {
         badge =
           "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
@@ -163,5 +163,8 @@ GitHub: https://github.com/${data.GitHub}
       console.log(err);
     });
 }
+
+//function to write md
+
 //export function
 module.exports = generateMarkdown;
