@@ -66,59 +66,58 @@ function generateMarkdown(data) {
     ])
     .then(function (data) {
       console.log(data);
-      writeFileAsync("README2.md", `
-      # ${data.Title}
 
-      ## Description
-      ${data.Description}
+      writeFileAsync(
+        "README2.md",
+        `# ${data.Title}
 
-      ## Table of Contents
+## Description
 
-      * [Installation](#installation)
-      * [Usage](#usage)
-      * [Contributing](#Contributing)
-      * [Tests](#tests)
-      * [License](#license)
-      * [Questions](#questions)
-       
-      ## Installation
-      ${data.Install}
+${data.Description}
 
-      ## Usage
-      ${data.Usage}
+## Table of Contents
 
-      ## Contributing
-      ${data.Contributing}
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#Contributing)
+* [Tests](#tests)
+* [License](#license)
+* [Questions](#questions)
 
-      ## Tests
-      ${data.Test}
+## Installation
 
-      ## License
-      ${data.License}
+${data.Install}
 
-      ## Questions
-      If you have any additional questions, please contact me via email or GitHub by clicking the links below.
-      Email: ${data.Email}
-      GitHub: https://github.com/${data.GitHub}
-      `, (err) => {
-        if (err) console.log(err);
-        console.log("Success!");
-      });
+## License
 
-      // fs.appendFile(
-      //   "index.json",
-      //   JSON.stringify(response, null, "\t"),
-      //   function (err) {
-      //     if (err) {
-      //       return console.log(err);
-      //     }
+${data.License}
 
-      //     console.log("Success!");
-      //   }
-      // );
+## Usage
+
+${data.Usage}
+
+## Contributing
+
+${data.Contributing}
+
+## Tests
+
+${data.Test}
+
+## Questions
+
+If you have any additional questions, please contact me via email or GitHub by clicking the links below.
+
+Email: ${data.Email} <br />
+GitHub: https://github.com/${data.GitHub}
+`,
+        (err) => {
+          if (err) console.log(err);
+          console.log("Success!");
+          return `# ${data.Title}`;
+        }
+      );
     });
-
-  //return `# ${data.title}`;
 }
 
 module.exports = generateMarkdown;
