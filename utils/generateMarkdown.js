@@ -64,11 +64,14 @@ function generateMarkdown(data) {
         name: "Email",
       },
     ])
-    .then(function (response) {
+    .then(function (data) {
+      console.log(data);
+      writeFileAsync("README2.md", `# ${data.Title}`, (err) => {
+        if (err) console.log(err);
 
-        console.log(response);
-        
-     
+        console.log("Success!");
+      });
+
       // fs.appendFile(
       //   "index.json",
       //   JSON.stringify(response, null, "\t"),
