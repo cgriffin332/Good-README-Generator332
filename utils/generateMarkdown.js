@@ -48,6 +48,16 @@ function generateMarkdown() {
       },
       {
         type: "input",
+        message: "In what year did you finish this application?",
+        name: "Year",
+      },
+      {
+        type: "input",
+        message: "What is your full name?",
+        name: "Name",
+      },
+      {
+        type: "input",
         message: "What is your GitHub username?",
         name: "GitHub",
       },
@@ -107,7 +117,8 @@ ${data.Install}
 
 ## License
 
-${data.License}
+This project is covered under the ${data.License} License. <br />
+Copyright (c) [${data.Year}] [${data.Name}]
 
 ## Usage
 
