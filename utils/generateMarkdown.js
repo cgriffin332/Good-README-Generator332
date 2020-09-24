@@ -3,11 +3,10 @@ const util = require("util");
 var inquirer = require("inquirer");
 
 // Promise-based versions of functions using node style callbacks
-const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
 
 // function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown() {
   inquirer
     .prompt([
       {
@@ -58,28 +57,28 @@ function generateMarkdown(data) {
       },
     ])
     .then(function (data) {
-      console.log(data);
       let badge = "";
-      if (data.License === "MIT"){
-        badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
-      } 
-      else if (data.License === "Mozilla"){
-        badge = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
-      }
-      else if (data.License === "ISC"){
-        badge = "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)"
-      }
-      else if (data.License === "IBM"){
-        badge = "[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)"
-      }
-      else if (data.License === "GNU"){
-        badge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
-      }
-      else if (data.License === "BSD"){
-        badge = "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
-      }
-      else if (data.License === "Boost"){
-        badge = "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)"
+      if (data.License === "MIT") {
+        badge =
+          "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+      } else if (data.License === "Mozilla") {
+        badge =
+          "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
+      } else if (data.License === "ISC") {
+        badge =
+          "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)";
+      } else if (data.License === "IBM") {
+        badge =
+          "[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)";
+      } else if (data.License === "GNU") {
+        badge =
+          "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+      } else if (data.License === "BSD") {
+        badge =
+          "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
+      } else if (data.License === "Boost") {
+        badge =
+          "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
       }
       writeFileAsync(
         "README2.md",
@@ -125,11 +124,7 @@ If you have any additional questions, please contact me via email or GitHub by c
 
 Email: ${data.Email} <br />
 GitHub: https://github.com/${data.GitHub}
-`,
-        (err) => {
-          if (err) throw err;
-          console.log("Success");
-        }
+`
       );
     });
 }

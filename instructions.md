@@ -69,7 +69,7 @@ Because this is a CLI App, there will be no need to deploy it to Heroku. This ti
 
 * `node_modules` is not tracked and uploaded to GitHub. (Hint: It is easy if you create your `.gitignore` file before installing dependencies with npm.)
 
-* Repo **MUST** include `package.json` with required dependencies. (Hint: Run `npm init` when you first setup the project before installing any dependencies.)
+? * Repo **MUST** include `package.json` with required dependencies. (Hint: Run `npm init` when you first setup the project before installing any dependencies.)
 
 * Include a video of the typical user flow through your application. This includes views of the prompts and the responses after their selection.
 

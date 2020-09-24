@@ -1,11 +1,11 @@
-const fs = require("fs");
-const util = require("util");
-var inquirer = require("inquirer");
+// const fs = require("fs");
+// const util = require("util");
+// var inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
   // Promise-based versions of functions using node style callbacks
-const readFileAsync = util.promisify(fs.readFile);
-const writeFileAsync = util.promisify(fs.writeFile);
+// const readFileAsync = util.promisify(fs.readFile);
+// const writeFileAsync = util.promisify(fs.writeFile);
 
 generateMarkdown();
 
