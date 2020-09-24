@@ -43,7 +43,7 @@ function generateMarkdown(data) {
       {
         type: "list",
         message: "Choose a license for your application.",
-        name: "license",
+        name: "License",
         choices: ["MIT", "Mozilla", "ISC", "IBM", "GNU", "BSD", "Boost"],
         //[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
         //[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
@@ -82,7 +82,7 @@ function generateMarkdown(data) {
       * [Questions](#questions)
        
       ## Installation
-      ${data.Installation}
+      ${data.Install}
 
       ## Usage
       ${data.Usage}
@@ -91,7 +91,7 @@ function generateMarkdown(data) {
       ${data.Contributing}
 
       ## Tests
-      ${data.Tests}
+      ${data.Test}
 
       ## License
       ${data.License}
