@@ -121,8 +121,8 @@ ${data.Description}
 * [Installation](#installation)
 * [Usage](#usage)
 * [Contributing](#Contributing)
-* [Tests](#tests)
 * [License](#license)
+* [Tests](#tests)
 * [Questions](#questions)
 
 ## Installation
