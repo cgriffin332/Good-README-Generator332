@@ -128,15 +128,15 @@ ${data.Description}
 
 ${data.Install}
 
+## Usage
+
+${data.Usage}
+
 ## License
 
 This project is covered under the ${data.License} License. <br />
 Copyright (c) [${data.Year}] [${data.Name}] <br />
 ${licenseText}
-
-## Usage
-
-${data.Usage}
 
 ## Contributing
 
