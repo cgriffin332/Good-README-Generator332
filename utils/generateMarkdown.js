@@ -60,7 +60,7 @@ function generateMarkdown() {
       },
       {
         type: "input",
-        message: "What are your email address?",
+        message: "What is your email address?",
         name: "Email",
       },
     ])
