@@ -120,8 +120,8 @@ ${data.Description}
 
 * [Installation](#installation)
 * [Usage](#usage)
-* [Contributing](#Contributing)
 * [License](#license)
+* [Contributing](#Contributing)
 * [Tests](#tests)
 * [Questions](#questions)
 
